@@ -60,7 +60,12 @@ flutter:
     - family: Lato
       fonts:
         - asset: assets/fonts/Lato-Regular.ttf
-
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/Cinzel-VariableFont_wght.ttf
+    - family: Courgette
+      fonts:
+        - asset: assets/fonts/Courgette-Regular.ttf
     - family: Island
       fonts:
         - asset: assets/fonts/IslandMoments-Regular.ttf

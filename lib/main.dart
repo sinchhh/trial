@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green, scaffoldBackgroundColor: const Color(0xFFdcedc9),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'PESU I/O'),
     );
   }
 }
@@ -98,11 +98,11 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Helloo worldd!!',
+                'Student Details',
                 style: TextStyle(
-                  color: Colors.pink,
+                  color: Color(0xFF7d064f),
                   fontSize: 40,
-                  fontFamily: 'Island',
+                  fontFamily: 'Cinzel',
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -110,41 +110,47 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 200.0,
                 width: 200.0,
               ),
+
               Text(
                 'Sinchana Hebbar',
                 style: TextStyle(
-                  color: Color(0xff2596be),
-                  fontSize: 30,
-                  fontFamily: 'Lato',
+                  color: Color(0xFF774177),
+                  //fontWeight: FontWeight.bold,
+                  fontSize: 35,
+                  fontFamily: 'Courgette',
                 ),
               ),
               Text(
                 'Ph no: 9898967676',
                 style: TextStyle(
-                  color: Colors.deepPurpleAccent,
+                  color: Color(0xFFa75ba7),
+                  fontWeight: FontWeight.w300,
                   fontSize: 20,
                 ),
               ),
               Text(
                 'SRN: PES2UG21CS123',
                 style: TextStyle(
-                  color: Colors.amber,
+                  color: Color(0xFFa75ba7),
+                  fontWeight: FontWeight.w300,
                   fontSize: 20,
                 ),
               ),
+
               ElevatedButton(
                 onPressed: (){
                   print('present');
                 },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.brown,
-                ),
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Text('Present'),
                 ),
-
-          )
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue.shade900,onPrimary: Colors.lightBlue.shade50,
+                  shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(12)
+                ),
+                ),
+                ),
             ],
           ),
         ),

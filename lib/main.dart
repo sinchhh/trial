@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'app.dart';
+
+void main() {
+  runApp(const App());
+}
+
+/*import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green, scaffoldBackgroundColor: const Color(0xFFdcedc9),
       ),
-      home: const MyHomePage(title: 'PESU I/O'),
+      home: const MyHomePage(title: 'PESpsiI/O'),
     );
   }
 }
@@ -49,6 +56,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String phoneNo ='';
 
   void _incrementCounter() {
     setState(() {
@@ -70,15 +78,17 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
       body: SafeArea(
-        child: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
+        child: Container(
+          //width: MediaQuery.of(context).size.width*0.5,
+          //width: double.infinity,
+          //color: Colors.lightGreenAccent.shade100,
           child: Column(
             // Column is also a layout widget. It takes a list of children and
             // arranges them vertically. By default, it sizes itself to fit its
@@ -120,21 +130,45 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontFamily: 'Courgette',
                 ),
               ),
-              Text(
-                'Ph no: 9898967676',
-                style: TextStyle(
-                  color: Color(0xFFa75ba7),
-                  fontWeight: FontWeight.w300,
-                  fontSize: 20,
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*0.1,vertical: 0.0),
+                child: TextField(
+                  onChanged: (val){
+                    setState(() {
+                      phoneNo=val;
+                    });
+                  },
+                  style: const TextStyle(
+                    color: Color(0xFFa75ba7),
+                    fontSize: 20,
+                  ),
+                  keyboardType: TextInputType.phone,
+                  decoration: const InputDecoration(
+                    hintText: 'Enter your phno',
+                    // focusedBorder: UnderlineInputBorder(
+                    //   borderSide: BorderSide(
+                    //     color: Colors.blueGrey,
+                    //     width: 1.3,
+                    //   )
+                    // ),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                            width: 2,
+                          )
+                      ),
+                    hintStyle:  TextStyle(color: Colors.brown,)
+                  ) ,
                 ),
               ),
               Text(
-                'SRN: PES2UG21CS123',
+                'SRN: PES2UG21CS123 extraaaa newwwww noyeeee',
                 style: TextStyle(
                   color: Color(0xFFa75ba7),
                   fontWeight: FontWeight.w300,
                   fontSize: 20,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
 
               ElevatedButton(
@@ -164,3 +198,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
